@@ -27,10 +27,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rollDice() {
-//        Toast.makeText(this, "Rolling...", Toast.LENGTH_SHORT).show()
         val rollResult: Int = Random.nextInt(6) + 1
+//        Toast.makeText(this, "Rolling...", Toast.LENGTH_SHORT).show()
 //        val rollText: TextView = findViewById(R.id.roll_text)
 //        rollText.text = rollResult
+
         val chosenDiceImage = when (rollResult) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -39,7 +40,6 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
         diceImage.setImageResource(chosenDiceImage)
 //        roll_button.text = getString(R.string.roll_again_message)
     }
